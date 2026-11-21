@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>oemer.apps – Apps &amp; Handyspiele aus Berlin</title>
+  <meta name="description" content="oemer.apps entwickelt Apps und Handyspiele für Android. Inhaber: Ömer Ören, Berlin.">
+  <!-- Google Search Console: Falls du die Meta-Tag-Methode nutzt, hier einfügen, z. B.:
+  <meta name="google-site-verification" content="DEIN-CODE"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="logo" href="./">oemer<span>.</span>apps</a>
+      <nav class="main">
+        <a href="#apps"><span class="de">Apps</span><span class="en">Apps</span></a>
+        <a href="#kontakt"><span class="de">Kontakt</span><span class="en">Contact</span></a>
+        <a href="impressum.html"><span class="de">Impressum</span><span class="en">Legal notice</span></a>
+        <button class="lang" id="langBtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <div class="tag">Indie Studio · Berlin</div>
+        <h1 class="de">Kleine Apps &amp; Spiele<br>mit <em>großer Liebe</em> gemacht.</h1>
+        <h1 class="en">Small apps &amp; games<br>made with <em>a lot of love</em>.</h1>
+        <p class="de">oemer.apps ist das Ein-Personen-Studio von Ömer Ören, Game Designer aus Berlin. Ich entwickle Apps und Handyspiele für Android – verspielt, schnell und liebevoll im Detail.</p>
+        <p class="en">oemer.apps is the one-person studio of Ömer Ören, a game designer based in Berlin. I build apps and mobile games for Android – playful, fast and polished down to the details.</p>
+      </section>
+
+      <section id="apps">
+        <h2 class="de">Apps &amp; Spiele</h2>
+        <h2 class="en">Apps &amp; games</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">💌</div>
+            <h3>Miles N Us</h3>
+            <p class="de">Die App für Paare in Fernbeziehungen: tägliche Fragen, Countdown zum nächsten Treffen und Spiele zu zweit.</p>
+            <p class="en">The app for long-distance couples: daily questions, a countdown to your next meeting and games for two.</p>
+            <span class="badge de">Bald bei Google Play</span><span class="badge en">Coming soon to Google Play</span>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3>PHOTON</h3>
+            <p class="de">Neon-Synthwave-Endless-Runner mit Skin-Shop und eigenem Soundtrack.</p>
+            <p class="en">Neon synthwave endless runner with a skin shop and its own soundtrack.</p>
+            <span class="badge de">Bald bei Google Play</span><span class="badge en">Coming soon to Google Play</span>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🏹</div>
+            <h3>NEON ARROWS</h3>
+            <p class="de">Pfeil-Puzzle mit täglicher Challenge und Streaks.</p>
+            <p class="en">Arrow puzzle game with a daily challenge and streaks.</p>
+            <span class="badge de">Bald bei Google Play</span><span class="badge en">Coming soon to Google Play</span>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔤</div>
+            <h3>Tageswort</h3>
+            <p class="de">Das tägliche Worträtsel auf Deutsch und Englisch.</p>
+            <p class="en">The daily word puzzle in German and English.</p>
+            <span class="badge de">Bald bei Google Play</span><span class="badge en">Coming soon to Google Play</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt">
+        <h2 class="de">Kontakt</h2>
+        <h2 class="en">Contact</h2>
+        <div class="contact-box">
+          <p class="de">Fragen, Feedback oder Support zu einer App? Schreib mir gern:</p>
+          <p class="en">Questions, feedback or support for one of the apps? Just write me:</p>
+          <p><a href="mailto:oemer.apps@gmail.com">oemer.apps@gmail.com</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 oemer.apps · Ömer Ören</span>
+      <nav>
+        <a href="impressum.html"><span class="de">Impressum</span><span class="en">Legal notice</span></a>
+        <a href="datenschutz.html"><span class="de">Datenschutz</span><span class="en">Datenschutz (DE)</span></a>
+        <a href="privacy.html">Privacy Policy (EN)</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement, btn = document.getElementById('langBtn');
+      function set(l) {
+        root.setAttribute('data-lang', l); root.lang = l;
+        btn.textContent = l === 'de' ? 'EN' : 'DE';
+      }
+      var start = (navigator.language || 'de').toLowerCase().indexOf('de') === 0 ? 'de' : 'en';
+      try { var s = localStorage.getItem('lang'); if (s) start = s; } catch (e) {}
+      set(start);
+      btn.addEventListener('click', function () {
+        var l = root.getAttribute('data-lang') === 'de' ? 'en' : 'de';
+        set(l); try { localStorage.setItem('lang', l); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
